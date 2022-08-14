@@ -1,9 +1,9 @@
-@import "../../index.scss";
+@use "../../sass/config.scss" as config;
 
 .btn4{
 
-    background-color: $white;
-    color: $btn4-color;
+    background-color: config.$white;
+    color: config.$btn4-color;
     height: 12px;
     width: 43px;
     font-size: 10px;
@@ -18,10 +18,10 @@
     }
 
     &:hover{
-        color: $btn4-color-hover;
+        color: config.$btn4-color-hover;
     }
 
     &:active{
-        color: $btn4-color-active;
+        color: config.$btn4-color-active;
     }
 }

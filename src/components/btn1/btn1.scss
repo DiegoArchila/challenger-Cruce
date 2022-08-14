@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@use "../../sass/config.scss" as config;
 
 .btn1{
     
@@ -6,11 +6,11 @@
     font-weight: 800;
     font-style: normal;
     line-height: 18px;
-    color: $white;
+    color: config.$white;
     width: 60px;
     height: 48px;
-    background-color: $white;
-    border: 2px solid $compra;
+    background-color: config.$white;
+    border: 2px solid config.$compra;
     overflow: hidden;
     border-radius: 6px;
     padding: 6px 12px;
@@ -26,15 +26,15 @@
         height: 36px;
         fill: none;
         path{
-            fill: $compra;
+            fill: config.$compra;
         }
     }
     
     &:hover{
         cursor: pointer;
         width: 147px;
-        color: $white;
-        background-color: $compra;
+        color: config.$white;
+        background-color: config.$compra;
         border: none;
        
         span{
@@ -42,16 +42,16 @@
         }
         svg{
             path{
-                fill: $white;
+                fill: config.$white;
             }
         }
     }
 
     &:active{
-        box-shadow: 0px 2px 6px 0px $active-compra inset;
+        box-shadow: 0px 2px 6px 0px config.$active-compra inset;
     }
 }
 
-@media screen and (min-width: $screen-width-tablet) {
+@media screen and (min-width: config.$screen-width-tablet) {
     
 }

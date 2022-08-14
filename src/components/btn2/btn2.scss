@@ -1,20 +1,20 @@
-@import "../../index.scss";
+@use "../../sass/config.scss" as config;
 
 .btn2{
     @extend %d-flex-row-cc;
     font-weight: 800;
     font-style: normal;
     line-height: 18px;
-    color: $white;
+    color: config.$white;
     width: 125px;
     height: 48px;
-    background-color: $bg-vertodo;
-    border: 2px solid $black-vertodo;
+    background-color: config.$bg-vertodo;
+    border: 2px solid config.$black-vertodo;
     overflow: hidden;
     border-radius: 6px;
     padding: 15px, 24px, 15px, 24px;
     gap: 10px;
-    box-shadow: 3px 3px 0px 0px $black-vertodo;
+    box-shadow: 3px 3px 0px 0px config.$black-vertodo;
     transition: all 0.150s ease-out;
 
     &:hover{
