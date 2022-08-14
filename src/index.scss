@@ -1,0 +1,84 @@
+/* -------------------- SETTINGS GLOBAL */
+
+/* ---------- Imports */
+@font-face {
+    font-family: "Neue Machina Light";
+    src: url("./fonts/NeueMachina-Light.otf");
+}
+
+@font-face {
+    font-family: "Neue Machina Regular";
+    src: url("./fonts/NeueMachina-Regular.otf");
+}
+
+@font-face {
+    font-family: "Neue Machina UltraBold";
+    src: url("./fonts/NeueMachina-Ultrabold.otf");
+}
+
+/* Colors */
+$compra: #76B043;
+$active-compra:rgba(255, 255, 255, 1);
+$white: #FFFFFF;
+$black-vertodo:rgba(0, 0, 0, 1);
+$bg-vertodo:rgba(242, 101, 34, 1);
+
+$btn4-color:#8C8C8C;
+$btn4-color-hover:#000000;
+$btn4-color-active:#F26522;
+
+$volver-color:#000000;
+$volver-color-hover:#FDB913;
+$volver-color-active: $volver-color;
+$volver-color-bg: #FDB913;
+$volver-color-bg-hover:#000000;
+$volver-color-bg-active:#FDB913;
+$volver-color-boxshadow1:#00000080;
+$volver-color-boxshadow2:#ffffff;
+
+/* Fonts */
+$font-NeueMcahina:"Neue Machina Light";
+$font-NeueMcahinaRegular:"Neue Machina Regular";
+$font-NeueMcahinaUltrabold:"Neue Machina UltraBold";
+
+/* Break Point Screen Size */
+$screen-width-tablet: 361px;
+$screen-width-desktop: 769px;
+
+
+/* ---------- normalize */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: $font-NeueMcahinaRegular;
+    font-size: 16px;
+    outline: 0px;
+}
+
+button{
+    border-style: none;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+/* ---------- Class Generics */
+
+%d-flex-row-cc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.d-flex-row-cc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;    
+}

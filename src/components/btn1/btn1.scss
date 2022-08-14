@@ -1,0 +1,57 @@
+@import "../../index.scss";
+
+.btn1{
+    
+    @extend %d-flex-row-cc;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 18px;
+    color: $white;
+    width: 60px;
+    height: 48px;
+    background-color: $white;
+    border: 2px solid $compra;
+    overflow: hidden;
+    border-radius: 6px;
+    padding: 6px 12px;
+    gap: 10px;
+    transition: all 0.150s ease-out;
+    
+    span{
+        display: none;
+    }
+
+    svg{
+        width: 36px;
+        height: 36px;
+        fill: none;
+        path{
+            fill: $compra;
+        }
+    }
+    
+    &:hover{
+        cursor: pointer;
+        width: 147px;
+        color: $white;
+        background-color: $compra;
+        border: none;
+       
+        span{
+            display: block;
+        }
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+    }
+
+    &:active{
+        box-shadow: 0px 2px 6px 0px $active-compra inset;
+    }
+}
+
+@media screen and (min-width: $screen-width-tablet) {
+    
+}

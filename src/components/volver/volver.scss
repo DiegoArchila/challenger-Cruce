@@ -1,0 +1,52 @@
+@import "../../index.scss";
+
+.volver{
+    @extend %d-flex-row-cc;
+    flex-direction: column;
+    width: 120px;
+    height: 60px;
+    border-radius: 120px 120px 0px 0px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    font-feature-settings: 'ss01' on, 'case' on;
+    color: $volver-color;
+    background-color: $volver-color-bg;
+    transition: all 0.150s ease-out;
+    font-size: 12px;
+
+    svg{
+        width: 36px;
+        height: 36px;
+        fill: none;
+        path{
+            fill:$volver-color;
+        }
+    }
+
+    &:hover{
+        color: $volver-color-hover;
+        background-color: $volver-color-bg-hover;
+        svg{
+            path{
+                fill:$volver-color-hover;
+            }
+        }
+    }
+
+    &:active{
+        color: $volver-color-active;
+        background-color: $volver-color-bg-active;
+        box-shadow: 0px -2px 6px 0px $volver-color-boxshadow1 inset;
+        box-shadow: 0px 2px 6px 0px $volver-color-boxshadow2 inset;
+
+        svg{
+            path{
+                fill:$volver-color-active;
+            }
+        }
+    }
+    
+}

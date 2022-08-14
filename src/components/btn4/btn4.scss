@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+.btn4{
+
+    background-color: $white;
+    color: $btn4-color;
+    height: 12px;
+    width: 43px;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.150s ease-out;
+
+    span{
+        display: block;
+    }
+
+    &:hover{
+        color: $btn4-color-hover;
+    }
+
+    &:active{
+        color: $btn4-color-active;
+    }
+}
