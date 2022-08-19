@@ -1,0 +1,82 @@
+/* ---------- Colors */
+$compra: #76B043;
+$active-compra:rgba(255, 255, 255, 1);
+$white: #FFFFFF;
+$black-vertodo:rgba(0, 0, 0, 1);
+$bg-vertodo:rgba(242, 101, 34, 1);
+
+/* Component btn1 */
+$btn1-color:#76B043;
+$btn1-color-hover:#FFFFFF;
+$btn1-color-active: #FFFFFF;
+$btn1-color-border:#76B043;
+$btn1-color-bg: #FFFFFF;
+$btn1-color-bg-hover:#76B043;
+$btn1-color-bg-active:#76B043;
+$btn1-color-boxshadow1:#00000080;
+$btn1-color-boxshadow2:#ffffff;
+
+/* Component btn2 */
+$btn2-color:#FFFFFF;
+$btn2-color-hover:#FFFFFF;
+$btn2-color-active: #FFFFFF;
+$btn2-color-border:#000000;
+$btn2-color-bg: #f26522;
+$btn2-color-bg-hover:#f26522;
+$btn2-color-bg-active:#f26522;
+$btn2-color-boxshadow:#000000;
+$btn2-color-boxshadow1:#00000080;
+$btn2-color-boxshadow2:#ffffff;
+
+/* Component btn3 */
+$btn3-color:#FFFFFF;
+$btn3-color-hover:#FFFFFF;
+$btn3-color-active: #FFFFFF;
+$btn3-color-border:#000000;
+$btn3-color-bg: #f26522;
+$btn3-color-bg-hover:#f26522;
+$btn3-color-bg-active:#f26522;
+$btn3-color-boxshadow:#000000;
+$btn3-color-boxshadow1:#00000080;
+$btn3-color-boxshadow2:#ffffff;
+
+/* Component btn4 */
+$btn4-color:#8C8C8C;
+$btn4-color-hover:#000000;
+$btn4-color-active: #F26522;
+$btn4-color-bg: #FFFFFF;
+
+
+/* Component volver */
+$volver-color:#000000;
+$volver-color-hover:#FDB913;
+$volver-color-active: $volver-color;
+$volver-color-bg: #FDB913;
+$volver-color-bg-hover:#000000;
+$volver-color-bg-active:#FDB913;
+$volver-color-boxshadow1:#00000080;
+$volver-color-boxshadow2:#ffffff;
+
+/* Component control */
+$control-color:#000000;
+$control-color-border:#F0F0F0;
+$control-color-bg: #FFFFFF;
+$control-color-boxshadow1:#00000026;
+
+/* Component promos */
+$promos-color:#FFFFFF;
+
+/* Component Checkbox */
+$checkbox-color:#000000;
+$checkbox-color-border:#F0F0F0;
+$checkbox-color-bg: #FFFFFF;
+$checkbox-color-boxshadow1:#00000026;
+
+/* Fonts */
+$font-NeueMcahina:"Neue Machina Light";
+$font-NeueMcahinaRegular:"Neue Machina Regular";
+$font-NeueMcahinaUltrabold:"Neue Machina UltraBold";
+
+/* Break Point Screen Size */
+$screen-width-tablet: 361px;
+$screen-width-desktop: 769px;

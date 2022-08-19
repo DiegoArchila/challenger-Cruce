@@ -1,50 +1,56 @@
-@use "../../sass/config.scss" as config;
+@use "../../sass/variables.scss" as var;
+@use "../../sass/mixins" as mix;
 
 .volver{
-    @extend %d-flex-row-cc;
+    
     flex-direction: column;
     width: 120px;
     height: 60px;
     border-radius: 120px 120px 0px 0px;
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 12px;
     letter-spacing: 0.05em;
     font-feature-settings: 'ss01' on, 'case' on;
-    color: config.$volver-color;
-    background-color: config.$volver-color-bg;
+    color: var.$volver-color;
+    background-color: var.$volver-color-bg;
     transition: all 0.150s ease-out;
-    font-size: 12px;
+    font-size: 10px;
+    padding-bottom: 12px;
+
+    & span{
+        font-size: 1em;
+    }
 
     svg{
         width: 36px;
         height: 36px;
         fill: none;
         path{
-            fill:config.$volver-color;
+            fill:var.$volver-color;
         }
     }
 
     &:hover{
-        color: config.$volver-color-hover;
-        background-color: config.$volver-color-bg-hover;
+        color: var.$volver-color-hover;
+        background-color: var.$volver-color-bg-hover;
         svg{
             path{
-                fill:config.$volver-color-hover;
+                fill:var.$volver-color-hover;
             }
         }
     }
 
     &:active{
-        color: config.$volver-color-active;
-        background-color: config.$volver-color-bg-active;
-        box-shadow: 0px -2px 6px 0px config.$volver-color-boxshadow1 inset;
-        box-shadow: 0px 2px 6px 0px config.$volver-color-boxshadow2 inset;
+        color: var.$volver-color-active;
+        background-color: var.$volver-color-bg-active;
+        box-shadow: 0px -2px 6px 0px var.$volver-color-boxshadow1 inset;
+        box-shadow: 0px 2px 6px 0px var.$volver-color-boxshadow2 inset;
 
         svg{
             path{
-                fill:config.$volver-color-active;
+                fill:var.$volver-color-active;
             }
         }
     }

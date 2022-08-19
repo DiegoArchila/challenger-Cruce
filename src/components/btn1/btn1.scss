@@ -1,40 +1,42 @@
-@use "../../sass/config.scss" as config;
+@use "../../sass/variables.scss" as var;
 
 .btn1{
     
-    @extend %d-flex-row-cc;
     font-weight: 800;
     font-style: normal;
     line-height: 18px;
-    color: config.$white;
+    letter-spacing: 0.05em;
+    font-feature-settings: 'ss01' on, 'case' on;
+    color: var.$btn1-color;
     width: 60px;
     height: 48px;
-    background-color: config.$white;
-    border: 2px solid config.$compra;
+    background-color: var.$btn1-color-bg;
+    border: 2px solid var.$btn1-color-border;
     overflow: hidden;
     border-radius: 6px;
     padding: 6px 12px;
-    gap: 10px;
-    transition: all 0.150s ease-out;
+    gap: 6px;
+    transition: all 0.150s ease-in;
     
     span{
         display: none;
+        color: var.$btn1-color-hover;
+        transition: all 0.150s ease;
     }
 
     svg{
         width: 36px;
         height: 36px;
-        fill: none;
+
         path{
-            fill: config.$compra;
+            fill: var.$compra;
         }
     }
     
     &:hover{
-        cursor: pointer;
         width: 147px;
-        color: config.$white;
-        background-color: config.$compra;
+        color: var.$btn1-color-hover;
+        background-color: var.$btn1-color-bg-hover;
         border: none;
        
         span{
@@ -42,16 +44,17 @@
         }
         svg{
             path{
-                fill: config.$white;
+                fill: var.$btn1-color-active;
             }
         }
     }
 
     &:active{
-        box-shadow: 0px 2px 6px 0px config.$active-compra inset;
+        box-shadow: 0px -2px 6px 0px var.$btn1-color-boxshadow1 inset;
+        box-shadow: 0px 2px 6px 0px var.$btn1-color-boxshadow2 inset;
     }
 }
 
-@media screen and (min-width: config.$screen-width-tablet) {
+@media screen and (min-width: var.$screen-width-tablet) {
     
 }

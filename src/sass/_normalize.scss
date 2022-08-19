@@ -1,0 +1,28 @@
+@use "./variables" as var;
+@use "./mixins.scss" as mix;
+
+
+/* ---------- normalize */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: var.$font-NeueMcahinaRegular;
+    font-size: 16px;
+    outline: 0px;
+}
+
+button{
+    border-style: none;
+    cursor: pointer;
+    @include mix.flex;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+label{
+    cursor: pointer;
+}

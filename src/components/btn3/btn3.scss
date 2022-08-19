@@ -1,27 +1,28 @@
-@use "../../sass/config.scss" as config;
+@use "../../sass/variables.scss" as var;
+@use "../../sass/mixins" as mix;
 
 .btn3{
-    @extend %d-flex-row-cc;
+    @include mix.flex;
     font-weight: 800;
     font-style: normal;
     line-height: 18px;
-    color: config.$black-vertodo;
+    color: var.$black-vertodo;
     width: 113px;
     height: 48px;
-    background-color: config.$white;
-    border: 2px solid config.$black-vertodo;
+    background-color: var.$white;
+    border: 2px solid var.$black-vertodo;
     overflow: hidden;
     border-radius: 6px;
     padding: 15px, 24px, 15px, 24px;
     gap: 10px;
-    box-shadow: 3px 3px 0px 0px config.$black-vertodo;
+    box-shadow: 3px 3px 0px 0px var.$black-vertodo;
     transition: all 0.150s ease-out;
 
     &:hover{
         box-shadow:none;
         border:none; 
-        color: config.$white;
-        background-color: config.$bg-vertodo;
+        color: var.$white;
+        background-color: var.$bg-vertodo;
     }
 
     &:active{

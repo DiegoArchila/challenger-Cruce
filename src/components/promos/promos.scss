@@ -1,0 +1,30 @@
+@use "../../sass/variables.scss" as var;
+@use "../../sass/mixins" as mix;
+
+.promos{
+
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    &__discount{
+
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-15deg);
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-align: right;
+        color: var.$promos-color;
+        bottom: 19px;
+        right: 10px;
+        
+        span.promos__type{
+            font-size: 10px;
+        }
+    }
+
+
+}

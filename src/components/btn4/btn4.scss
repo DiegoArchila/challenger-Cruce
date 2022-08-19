@@ -1,9 +1,10 @@
-@use "../../sass/config.scss" as config;
+@use "../../sass/variables.scss" as var;
+@use "../../sass/mixins" as mix;
 
 .btn4{
-
-    background-color: config.$white;
-    color: config.$btn4-color;
+  
+    background-color: var.$btn4-color-bg;
+    color: var.$btn4-color;
     height: 12px;
     width: 43px;
     font-size: 10px;
@@ -15,13 +16,14 @@
 
     span{
         display: block;
+        font-size: 1em;
     }
 
     &:hover{
-        color: config.$btn4-color-hover;
+        color: var.$btn4-color-hover;
     }
 
     &:active{
-        color: config.$btn4-color-active;
+        color: var.$btn4-color-active;
     }
 }
