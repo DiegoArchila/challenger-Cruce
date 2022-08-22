@@ -10,8 +10,23 @@ import Promos from "./components/promos/promos.jsx";
 import Checkbox from './components/checkbox/checkbox.jsx';
 
 import './sass/index.scss';
+import Cantidad from './components/cantidad/cantidad.jsx';
+import Articulo from './components/articulo/articulo.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const product={
+    marca: "funko",
+    nombre: "Funko POP | Game Of Thrones - Daenerys 25",
+    precio: 2390,
+    descuento:53.1,
+    cSnInteres:6,
+    promo:10,
+    stock:12,
+    imgOutBox:"GameOfThrones-DaenerysTargayen-OutBox.png",
+    imgInBox: "GameOfThrones-DaenerysTargayen-InBox.png"
+}
+
 root.render(
   <React.StrictMode>
   <br/>
@@ -24,7 +39,7 @@ root.render(
     <div className='d-flex-row-cc'>
       <div>
         <h3>btn1</h3>
-        <Btn1 />
+        <Btn1 text={"agregar"}/>
       </div>
       <br />
       <div>
@@ -68,6 +83,14 @@ root.render(
         <Checkbox label={"Opción 2"} value={2}/>
         <Checkbox label={"Opción 3"} value={3}/>
         <Checkbox label={"Opción 4"} value={4}/>
+      </div>
+      <div>
+        <h3>Cantidad</h3>
+        <Cantidad value={1} stock={5} />
+      </div>
+      <div>
+        <h3>Articulo 1</h3>
+        <Articulo product={ product }/>
       </div>
     </div>
 
