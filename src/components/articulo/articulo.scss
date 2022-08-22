@@ -1,14 +1,13 @@
 @use "../../sass/variables.scss" as var;
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/animations.scss" as ani;
 
 .articulo{
 
     width: 240px;
     height: 510px;
     padding: 6px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    @include mix.flex($direction: column, $justify-content:flex-start);
     gap: 12px;
 
     //Contenedor Imagen
@@ -58,9 +57,7 @@
 
     //Contenedor Ficha
     & > .articulo__ficha{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        @include mix.flex($direction: column,$justify-content:space-evenly,$align-items: flex-start);
         gap: 12px;
 
         & > .articulo__articulo{
@@ -111,10 +108,7 @@
             }
 
             & > div.articulo__final{
-                display: flex;
-                flex-direction: row;
-                justify-content: start;
-                align-items: baseline;
+                @include mix.flex($justify-content: start,$align-items: flex-start);
                 gap: 6px;
                 
                 &  > span.articulo__finalText{
@@ -147,12 +141,50 @@
                     color:#EC2227;
                     align-self: flex-start;
                 }
-
             }
         }
     }  
 }
 
-.articuloLoading{
-    
+.loading{
+    @include mix.flex($direction: column,$justify-content:flex-start,$align-items: flex-start);
+    gap: 12px;
+    padding: 9px 15px;
+
+    &__img{
+        @include ani.ani-loading-article;
+        width: 100%;
+        height: 288px; 
+        background: #f0f0f0;
+    }
+    &__marca{
+        @include ani.ani-loading-article;
+        width: 72px;
+        height: 12px;
+        background: rgb(240,240,240);
+    }
+    &__containerTxt{
+        @include mix.flex($direction: column,$justify-content:flex-start,$align-items: flex-start);
+        gap: 6px;
+    }
+    &__txt{
+        @include ani.ani-loading-article;
+        width: 180px;
+        height: 15px; 
+        background: rgb(240,240,240);
+    }
+    &__precio{
+        @include ani.ani-loading-article;
+        width: 120px;
+        height: 15px; 
+        background: rgb(240,240,240);
+    }
+    &__btn{
+
+        width: 60px;
+        height: 48px; 
+        border: 3px solid rgb(240,240,240);
+        border-radius: 6px;
+        margin-top: calc(27px - 12px);
+    }
 }

@@ -1,0 +1,9 @@
+@mixin ani-loading-article() {
+    animation: key-ani-loading-article 0.7s infinite alternate;
+}
+
+@keyframes key-ani-loading-article{
+
+    from{background-color: #ffffff;}
+    to{background-color: #f0f0f0;}
+}

@@ -3,6 +3,9 @@
 /* Dependences, Imports  */
 @forward "./dependences.scss";
 
+/* Dependences, Imports  */
+@forward "./animations.scss";
+
 /* variables  */
 @forward "./variables.scss";
 
@@ -11,6 +14,3 @@
 
 /* Globals */
 @forward "./globals.scss";
-
-/* components */
-@forward "./components.scss";
