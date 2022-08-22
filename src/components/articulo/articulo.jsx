@@ -34,7 +34,7 @@ const loading=(
 function Articulo({product}){
     const [Load, setLoad]=useState(false);
 
-    let pDescuento=Math.round(((product.precio * product.descuento)/100));
+    let pDescuento=Math.round(((product.precio * product.promo)/100));
 
     useEffect(()=>{
         setTimeout(() => {
@@ -52,7 +52,8 @@ function Articulo({product}){
                 <div className="articulo__containerImg">
                     <img src={require("../../img/products/"+product.imgInBox)} alt={product.nombre} className="articulo__img" id="imgInBox"/>
                     <img src={require("../../img/products/"+product.imgOutBox)} alt={product.nombre} className="articulo__img" id="imgOutBox"/>
-                    <Promo value={Math.round(product.descuento)} type={"%"} />            
+                    {product.promo!==(0) ?
+                    <Promo value={Math.round(product.promo)} type={"%"} />:""}            
                 </div>
     
                 <div className="articulo__ficha">
@@ -72,19 +73,32 @@ function Articulo({product}){
                                 {product.cSnInteres} Cuotas s/interés de
                             </span>
                             <span className="articulo__cuotaCuota">
-                                {format((pDescuento/product.cSnInteres),2)}
+                                {(product.promo!==0 || product.promo===null) ?
+                                    format((pDescuento/product.cSnInteres),2):
+                                    format((product.precio/product.cSnInteres),2)
+                                }
                             </span>
                         </div>
                         <div className="articulo__final">
                             <span className="articulo__finalText">
                                 final:
                             </span>
-                            <span className="articulo__finalAntes">
-                                {format(product.precio, 0)}
-                            </span>
-                            <span className="articulo__finalDespues">
-                                {format(pDescuento, 0)}
-                            </span>
+                            
+                            { //Rules os styles by descuento
+                                product.promo!==(0) ?
+                                <Fragment>
+                                    <span className="articulo__finalAntes">
+                                        {format(product.precio, 0)}
+                                    </span>
+                                    <span className="articulo__finalDespues">
+                                        {format(pDescuento, 0)}
+                                    </span>
+                                </Fragment>
+                                :
+                                <span className="articulo__finalDespues-sin">
+                                    {format(product.precio, 0)}
+                                </span>
+                            }
                         </div>
                     </div>
     
