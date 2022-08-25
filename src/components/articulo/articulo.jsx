@@ -74,7 +74,7 @@ function Articulo({product}){
                             </span>
                             <span className="articulo__cuotaCuota">
                                 {(product.promo!==0 || product.promo===null) ?
-                                    format((pDescuento/product.cSnInteres),2):
+                                    format(((product.precio - pDescuento)/product.cSnInteres),2):
                                     format((product.precio/product.cSnInteres),2)
                                 }
                             </span>
@@ -91,7 +91,7 @@ function Articulo({product}){
                                         {format(product.precio, 0)}
                                     </span>
                                     <span className="articulo__finalDespues">
-                                        {format(pDescuento, 0)}
+                                        {format((product.precio - pDescuento), 0)}
                                     </span>
                                 </Fragment>
                                 :

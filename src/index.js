@@ -20,7 +20,7 @@ const product={
     marca: "funko",
     nombre: "Funko POP | Game Of Thrones - Daenerys 25",
     precio: 2390,
-    promo:35,
+    promo:10,
     cSnInteres:6,
     stock:12,
     imgOutBox:"GameOfThrones-DaenerysTargayen-OutBox.png",
