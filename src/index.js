@@ -12,6 +12,7 @@ import Checkbox from './components/checkbox/checkbox.jsx';
 import './sass/index.scss';
 import Cantidad from './components/cantidad/cantidad.jsx';
 import Articulo from './components/articulo/articulo.jsx';
+import Etiqueta from './components/etiqueta/etiqueta.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,12 +20,14 @@ const product={
     marca: "funko",
     nombre: "Funko POP | Game Of Thrones - Daenerys 25",
     precio: 2390,
-    promo:53.1,
+    promo:35,
     cSnInteres:6,
     stock:12,
     imgOutBox:"GameOfThrones-DaenerysTargayen-OutBox.png",
     imgInBox: "GameOfThrones-DaenerysTargayen-InBox.png"
 }
+
+const etiquetaMsg="Mantené pulsado cualquier artículo para agregarlo al carrito Mantené pulsado cualquier artículo para agregarlo al carrito"
 
 root.render(
   <React.StrictMode>
@@ -33,6 +36,7 @@ root.render(
     <h1>Components</h1>
   </center>
   <br/>
+  <Etiqueta Message={etiquetaMsg} />
   <hr />
     <br/>
     <div className='d-flex-row-cc'>
