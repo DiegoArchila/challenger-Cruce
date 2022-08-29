@@ -1,0 +1,34 @@
+/* ---------- Colors */
+/* Component btn1 */
+/* Component btn2 */
+/* Component btn3 */
+/* Component btn4 */
+/* Component volver */
+/* Component control */
+/* Component promos */
+/* Component Checkbox */
+/* Component cantidad */
+/* Fonts */
+/* Break Point Screen Size */
+.btn4 {
+  background-color: #FFFFFF;
+  color: #8C8C8C;
+  height: 12px;
+  width: 43px;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.15s ease-out;
+}
+.btn4 span {
+  display: block;
+  font-size: 1em;
+}
+.btn4:hover {
+  color: #000000;
+}
+.btn4:active {
+  color: #F26522;
+}/*# sourceMappingURL=btn4.css.map */

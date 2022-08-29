@@ -1,0 +1,44 @@
+/* ---------- Colors */
+/* Component btn1 */
+/* Component btn2 */
+/* Component btn3 */
+/* Component btn4 */
+/* Component volver */
+/* Component control */
+/* Component promos */
+/* Component Checkbox */
+/* Component cantidad */
+/* Fonts */
+/* Break Point Screen Size */
+.cantidad {
+  width: 93px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #F0F0F0;
+  background-color: #FFFFFF;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.cantidad span {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+.cantidad img {
+  width: 28.5px;
+  height: 36px;
+  cursor: pointer;
+}
+.cantidad:hover span {
+  color: #8C8C8C;
+}
+.cantidad:active span {
+  color: #F26522;
+}
+.cantidad:focus span {
+  color: #000000;
+}/*# sourceMappingURL=cantidad.css.map */

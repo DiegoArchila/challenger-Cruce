@@ -1,9 +1,99 @@
-.header{
-    width: 100%;
-    min-height: 72px;
-    color: #FFFFFF;
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/variables.scss" as var;
 
-    .navigation{
+.header{
+
+    width: 100%;
+    height: 72px;
+    color: #FFFFFF;
+    
+    &__menu{
+        width: 36px;
+        height: 36px;
+    }
+
+    &__logo{
+        width: 122px;
+        height: 56px;
+    }
+
+    &__nav{
+
+        @include mix.flex($justify-content:space-between);
+        width: 100%;
+        height: 72px;
+        padding: 0px 21px;
+
+        & > .header__links{
+            @include mix.flex();
+            width: auto;
+            gap: 18px;
+            display: none;
+            & > .header__link{
+                & > .header__linkTxt{
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #8C8C8C;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    font-feature-settings: 'ss01' on, 'case' on;
+                }            
+            }
+        }
         
+        & > .actions{
+            @include mix.flex($flex-wrap:nowrap);
+            gap: 18px;
+
+            & > .search{
+                display: none;
+            }
+
+            & > .header__user{
+                display: none;
+            }
+        
+            & > .header__cart{
+                width: 47px;
+                height: 36px;
+                position: relative;
+                & > .header__cartTxt{
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 16px;
+                  line-height: 18px;
+                  color: #EC2227;
+                  position: absolute;
+                  bottom:5px;
+                }  
+            }
+        }
+    }
+}
+
+@media screen and (min-width: var.$screen-width-desktop) {
+    .header{
+        &__logo{
+            display: none;
+        }
+        &__nav{
+            & > .header__links{
+                @include mix.flex();
+                margin-right: auto;
+            }
+            & > .actions{
+                & > .search{
+                    display: block;
+                }
+                & > .header__user{
+                    display: block;
+                }
+            }
+        }
+        & > .search{
+            display: none;
+        }
     }
 }

@@ -1,0 +1,58 @@
+/* ---------- Colors */
+/* Component btn1 */
+/* Component btn2 */
+/* Component btn3 */
+/* Component btn4 */
+/* Component volver */
+/* Component control */
+/* Component promos */
+/* Component Checkbox */
+/* Component cantidad */
+/* Fonts */
+/* Break Point Screen Size */
+.btn1 {
+  font-weight: 800;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  font-feature-settings: "ss01" on, "case" on;
+  color: #76B043;
+  width: 60px;
+  height: 48px;
+  background-color: #FFFFFF;
+  border: 2px solid #76B043;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 6px 12px;
+  gap: 6px;
+  transition: all 0.15s ease-in;
+}
+.btn1 span {
+  display: none;
+  color: #FFFFFF;
+  transition: all 0.15s ease;
+  text-transform: capitalize;
+}
+.btn1 svg {
+  width: 36px;
+  height: 36px;
+}
+.btn1 svg path {
+  fill: #76B043;
+}
+.btn1:hover {
+  width: 147px;
+  color: #FFFFFF;
+  background-color: #76B043;
+  border: none;
+}
+.btn1:hover span {
+  display: block;
+}
+.btn1:hover svg path {
+  fill: #FFFFFF;
+}
+.btn1:active {
+  box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5019607843) inset;
+  box-shadow: 0px 2px 6px 0px #ffffff inset;
+}/*# sourceMappingURL=btn1.css.map */

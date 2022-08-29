@@ -1,3 +1,5 @@
+@use "./mixins.scss" as mix;
+
 /* -------------------- GLOBALS */
 
 .d-flex-row-cc{
@@ -8,3 +10,8 @@
     flex-wrap: wrap;
     gap:30px;    
 }
+
+.app{
+    @include mix.flex();
+}
+

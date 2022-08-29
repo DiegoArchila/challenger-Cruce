@@ -1,0 +1,48 @@
+@use "../../sass/variables.scss" as var;
+
+.exclamation{
+    position: relative;
+    & > span{
+        width: 70px;
+        height: 18px;
+        border: 2px solid #EC2227;
+        color: #EC2227;
+        font-family: var.$font-InterRegular;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 0px 6px;
+    }
+}
+
+/* Class Circles*/
+.circle-rightTop,
+.circle-rightBottom,
+.circle-leftTop,
+.circle-leftBottom{
+    width: 6px;
+    height: 6px;
+    background-color: #EC2227;
+    position: absolute;
+    border-radius: 4px;
+}
+
+//Rigth
+.circle-rightTop, .circle-rightBottom{
+    right: -3px;
+}
+//Right, Left TOP
+.circle-rightTop, .circle-leftTop{
+    top: -6px;
+}
+//Right, Left BOTTOM
+.circle-rightBottom,.circle-leftBottom{
+    bottom: -3px;
+}
+
+//Left
+.circle-leftTop, .circle-leftBottom{
+    left: -3px;
+}
+

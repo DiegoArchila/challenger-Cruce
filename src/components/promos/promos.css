@@ -1,0 +1,33 @@
+/* ---------- Colors */
+/* Component btn1 */
+/* Component btn2 */
+/* Component btn3 */
+/* Component btn4 */
+/* Component volver */
+/* Component control */
+/* Component promos */
+/* Component Checkbox */
+/* Component cantidad */
+/* Fonts */
+/* Break Point Screen Size */
+.promos {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.promos__discount {
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-15deg);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #FFFFFF;
+  bottom: 19px;
+  right: 7px;
+}
+.promos__discount span.promos__type {
+  font-size: 10px;
+}/*# sourceMappingURL=promos.css.map */
