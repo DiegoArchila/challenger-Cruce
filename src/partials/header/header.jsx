@@ -3,7 +3,7 @@ import "./header.scss";
 import Etiqueta from "../../components/etiqueta/etiqueta.jsx";
 import menu from "../../svg/icon/menu.svg";
 import logo from "../../svg/portada/logo.svg";
-import cart from "../../svg/icon/carrito.svg";
+import Cart from "../../svg/icon/carrito.jsx";
 import user from "../../svg/icon/usuario.svg";
 import Buscar from "../../components/buscar/buscar";
 import Exclamation from "../../components/exclamation/exclamation.jsx";
@@ -60,7 +60,7 @@ function Header({itemsCart, Msg}){
                 <Link to="#" className="header__logo">
                     <img className="header__logo" src={logo} alt={menu} />
                 </Link>
-            
+                
                 {/*Acciones*/}
                 <div className="actions">
 
@@ -71,7 +71,7 @@ function Header({itemsCart, Msg}){
                     </Link>
 
                     <Link to="#" className="header__cart">
-                        <img className="header__cartLogo" src={cart} alt={menu} />
+                        <Cart />
                         <span className="header__cartTxt">{itemsCart}</span>
                     </Link>
                 </div>

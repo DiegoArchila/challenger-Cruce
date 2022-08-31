@@ -1,0 +1,58 @@
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/variables.scss" as var;
+
+.beneficios{
+
+    display: none;
+    min-height: 72px;
+    max-height: 110px;
+    gap: 25px;
+
+    &__beneficio{
+        @include mix.flex();
+        
+        & > .beneficio__container{
+            margin-left: 17px;
+            @include mix.flex($direction:column, $align-items:flex-start );
+
+            & > span.beneficio__title{
+                font-style: normal;
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 18px;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'ss01' on, 'case' on;   
+                color: #000000;             
+            }
+            & > .beneficio__description{
+                font-family: var.$font-InterRegular;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 15px;
+                letter-spacing: 0.01em;
+                font-feature-settings: 'ss01' on, 'case' on;
+                color: #EC2227;
+            }
+            & > .beneficio-isFalse{
+                color:#8C8C8C;
+            }
+        } 
+        & > img.icon {
+            fill: #76B043;
+        }           
+    }
+
+    &__verticalLine{
+        width: 36px;
+        height: 0px;
+        border: 1px solid #C8C8C8;
+        transform: rotate(-60deg);
+    }
+}
+
+@media screen and (min-width: var.$screen-width-desktop) {
+    .beneficios{
+        @include mix.flex();
+    }
+}
