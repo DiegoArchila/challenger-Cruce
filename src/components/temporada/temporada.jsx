@@ -14,7 +14,7 @@ function Temporada({temporada, description}) {
                 return <Articulo product={e} key={e.marca+i} />
             })}                
             </div>
-            <Btn text={"Ver colección"} key={"vercolecc"+1} />
+            
         </section>
     );
 }
