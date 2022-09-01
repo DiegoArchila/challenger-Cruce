@@ -5,8 +5,8 @@
 
     display: none;
     min-height: 72px;
-    max-height: 110px;
-    gap: 25px;
+    max-height: auto;
+    gap: 24px;
 
     &__beneficio{
         @include mix.flex();
@@ -46,7 +46,8 @@
     &__verticalLine{
         width: 36px;
         height: 0px;
-        border: 1px solid #C8C8C8;
+        border: none;
+        border-bottom: 1px solid #C8C8C8;
         transform: rotate(-60deg);
     }
 }
@@ -56,3 +57,4 @@
         @include mix.flex();
     }
 }
+

@@ -47,7 +47,7 @@ function Articulo({product}){
         <Fragment>
             {
                 (Load) ? 
-                <article className="articulo" onMouseOver="" >
+                <article className="articulo">
     
                 <div className="articulo__containerImg">
                     <img src={require("../../img/products/"+product.imgInBox)} alt={product.nombre} className="articulo__img" id="imgInBox"/>

@@ -4,6 +4,9 @@ import tCredito from "../../svg/icon/credito.svg";
 import Carro from "../../svg/icon/envio-1.svg";
 import Moto from "../../svg/icon/envio-2.svg";
 
+import dataProducts from "../../data/products.js";
+import Temporada from "../../components/temporada/temporada.jsx";
+
 
 function Home() {
 
@@ -29,13 +32,19 @@ function Home() {
         }
     ];
 
+    const temporadaDescription="Llegó el invierno, encontralo antes que nadie Llegó el invierno, encontralo antes que nadie"
 
     const etiquetaMsg="Mantené pulsado cualquier artículo para agregarlo al carrito"
 
     return (
         <div className="app">
+        
             <Header itemsCart={3} Msg={etiquetaMsg}/>
-            <Beneficios beneficios={beneficios} key={"beneficios"}/>
+            
+            <main className="main">
+                <Beneficios beneficios={beneficios} key={"beneficios"}/>
+                <Temporada temporada={dataProducts} description={temporadaDescription} />
+            </main>
         </div>
     );
 }

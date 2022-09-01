@@ -1,0 +1,28 @@
+@use "../../sass/mixins" as mix;
+
+.temporada{
+    @include mix.flex($direction:column);
+    margin: 24px;
+    
+    &__description{
+
+        height: 30px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 27px;
+        line-height: 30px;
+        font-feature-settings: 'zero' on;
+        overflow: hidden
+
+
+    }
+
+    &__products{
+        @include mix.flex();
+    }
+
+    & > .btn2{
+        width: 175px;
+        height: 48px;
+    }
+}

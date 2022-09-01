@@ -4,16 +4,16 @@
 
 .articulo{
 
-    width: 240px;
-    height: 510px;
-    padding: 6px 15px 15px;
-    @include mix.flex($direction: column, $justify-content:flex-start);
-    gap: 12px;
+    width: 142px;
+    height: 298px;
+    padding: 0px 6px 6px;
+    @include mix.flex($direction: row, $justify-content:flex-start);
+    gap: 6px;
 
     //Contenedor Imagen
     &__containerImg{
-        width: 210px;
-        height: 288px;
+        width: 130px;
+        height: 178px;
         position: relative;
         transition: all 150ms ease;
         
@@ -58,27 +58,33 @@
     //Contenedor Ficha
     & > .articulo__ficha{
         @include mix.flex($direction: column,$justify-content:space-evenly,$align-items: flex-start);
-        gap: 12px;
+        gap: 6px;
 
         & > .articulo__articulo{
             & > span.articulo__marca{
                 display: block;
-                font-size: 16px;
+                height: 18px;
+                font-size: 1rem;
                 font-weight: 800;
                 line-height: 18px;
-                letter-spacing: 0.05em;
+                letter-spacing: 0.05rem;
                 text-align: left;
                 color: #7D5A94;
                 text-transform: capitalize;
+                font-feature-settings: 'ss01' on, 'case' on;
             }
 
             & > span.articulo__nombre{
+                height: 30px;
                 font-family: var.$font-InterRegular;
-                font-size: 15px;
+                overflow: hidden;
+                font-size: 0.8125em;
+                font-style: normal;
                 font-weight: 400;
-                line-height: 18px;
+                line-height: 0.9375em;
                 letter-spacing: 0em;
                 text-align: left;
+                font-feature-settings: 'ss01' on, 'case' on;
             }
         }
         
@@ -88,19 +94,21 @@
             & > div.articulo__cuota{
                 &  > span.articulo__cuotaTxt{
                     font-family: var.$font-InterRegular;
-                    font-size: 15px;
+                    font-size: 0.8125rem;
                     font-weight: 400;
-                    line-height: 18px;
+                    line-height: 15px;
+                    height: 15px;
                     color: #505050;
                     letter-spacing: 0em;
                     text-align: left;
+                    overflow: hidden;
                     display: block;
                 }
                 &  > span.articulo__cuotaCuota{
                     font-family: var.$font-InterRegular;
-                    font-size: 22px;
+                    font-size: 1rem;
                     font-weight: 700;
-                    line-height: 24px;
+                    line-height: 1.125rem;
                     letter-spacing: 0em;
                     text-align: left;
                     display: block;
