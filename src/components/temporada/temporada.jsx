@@ -11,10 +11,23 @@ function Temporada({temporada, description}) {
             </span>
             <div className="temporada__products">
             {temporada.map((e,i) => {
-                return <Articulo product={e} key={e.marca+i} />
-            })}                
+                let productTemp=[];
+                if (i<2) {
+                    productTemp.push(<Articulo product={e} key={e.marca+i} />); 
+                }
+                return productTemp;
+            })}
             </div>
-            
+            <div className="temporada__products">
+            {temporada.map((e,i) => {
+                let productTemp=[];
+                if (i>1 && i<4) {
+                    productTemp.push(<Articulo product={e} key={e.marca+i} />); 
+                }
+                return productTemp;
+            })}
+            </div>             
+               <Btn text={"Ver colección"} />     
         </section>
     );
 }

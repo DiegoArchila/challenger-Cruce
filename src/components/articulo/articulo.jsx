@@ -47,7 +47,7 @@ function Articulo({product}){
         <Fragment>
             {
                 (Load) ? 
-                <article className="articulo">
+                <article className={"articulo"}>
     
                 <div className="articulo__containerImg">
                     <img src={require("../../img/products/"+product.imgInBox)} alt={product.nombre} className="articulo__img" id="imgInBox"/>
@@ -105,6 +105,7 @@ function Articulo({product}){
                     <Btn text="agregar" />
     
                 </div>
+
             </article>
                 :loading
             }

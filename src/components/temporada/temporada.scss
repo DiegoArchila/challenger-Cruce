@@ -1,8 +1,13 @@
 @use "../../sass/mixins" as mix;
 
 .temporada{
+
     @include mix.flex($direction:column);
-    margin: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    height: 794px;
+    overflow: visible;
+    gap:24px;
     
     &__description{
 
@@ -11,18 +16,31 @@
         font-weight: 800;
         font-size: 27px;
         line-height: 30px;
+        padding-left: 18px;
         font-feature-settings: 'zero' on;
         overflow: hidden
-
-
     }
 
     &__products{
-        @include mix.flex();
+        @include mix.flex($direction: row, $justify-content:flex-start);
+        height: 298px;
+        gap: 18px;
+        overflow: visible;
+
+        &:nth-child(1){
+            flex-direction: column;
+        }
+
+        & > .articulo:nth-child(even), & > .loading:nth-child(even){
+            padding-top: 60px;
+        }
+
     }
+
 
     & > .btn2{
         width: 175px;
         height: 48px;
+        margin-top: auto;
     }
 }

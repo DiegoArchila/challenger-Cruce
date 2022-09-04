@@ -6,7 +6,7 @@
 
     width: 142px;
     height: 298px;
-    overflow: hidden;
+    overflow: visible;
     padding: 0px 6px 6px;
     @include mix.flex($direction: row, $justify-content:flex-start);
     gap: 6px;
@@ -175,14 +175,20 @@
 }
 
 .loading{
-    @include mix.flex($direction: column,$justify-content:flex-start,$align-items: flex-start);
-    gap: 12px;
-    padding: 9px 15px;
+    @include mix.flex($direction: column,
+    $justify-content:center,
+    $align-items: stretch,
+    $flex-wrap:nowrap);
+    gap: 6px;
+    width: 142px;
+    height: 298px;
+    overflow: visible;
+    padding: 0px 6px 6px;
 
     &__img{
         @include ani.ani-loading-article;
-        width: 100%;
-        height: 288px; 
+        width: 130px;
+        height: 178px; 
         background: #f0f0f0;
     }
     &__marca{
@@ -193,26 +199,30 @@
     }
     &__containerTxt{
         @include mix.flex($direction: column,$justify-content:flex-start,$align-items: flex-start);
-        gap: 6px;
+        gap: 3px;
     }
     &__txt{
         @include ani.ani-loading-article;
-        width: 180px;
+        width: 100%;
         height: 15px; 
         background: rgb(240,240,240);
     }
     &__precio{
         @include ani.ani-loading-article;
-        width: 120px;
+        width: 80%;
         height: 15px; 
         background: rgb(240,240,240);
     }
     &__btn{
-
+        display: none;
         width: 60px;
         height: 48px; 
         border: 3px solid rgb(240,240,240);
         border-radius: 6px;
         margin-top: calc(27px - 12px);
     }
+}
+
+@media screen and (min-width: var.$screen-width-tablet) {
+    
 }

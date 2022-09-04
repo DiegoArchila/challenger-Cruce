@@ -15,3 +15,10 @@
     @include mix.flex();
 }
 
+.isFlex-start{
+    align-self: flex-start;
+}
+
+.mt-60{
+    padding-top: 60px;
+}
