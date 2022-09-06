@@ -76,8 +76,8 @@ function Header({itemsCart, Msg}){
                     </Link>
                 </div>
             
-            </nav>
-            <Etiqueta Message={Msg} />
+                </nav>
+                <Etiqueta Message={Msg} />
             <Buscar id={"searchHeader"}/>
         </header>
     );

@@ -2,8 +2,21 @@
     animation: key-ani-loading-article 0.7s infinite alternate;
 }
 
+@mixin ani-marquee {
+    animation: marquee 10s linear infinite;
+}
+
 @keyframes key-ani-loading-article{
 
     from{background-color: #ffffff;}
     to{background-color: #f0f0f0;}
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(80%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }

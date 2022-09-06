@@ -4,11 +4,11 @@
 
 .articulo{
 
+    @include mix.flex($direction: row, $justify-content:flex-start);
     width: 142px;
     height: 298px;
     overflow: visible;
     padding: 0px 6px 6px;
-    @include mix.flex($direction: row, $justify-content:flex-start);
     gap: 6px;
 
     //Contenedor Imagen
@@ -21,6 +21,7 @@
         & > img.articulo__img{
             width: 100%;
             height: 100%;
+            transition: all 150ms ease;
         }
 
         & > div.promos{
@@ -36,6 +37,7 @@
 
         .articulo:hover > & > img#imgInBox{
             display: none;
+            
         }
 
         .articulo:active > & > img#imgInBox{
@@ -66,7 +68,7 @@
             height: 50px;
             overflow: hidden;
             & > span.articulo__marca{
-                
+                font-family: var.$font-NeueMcahinaUltrabold;
                 display: block;
                 overflow-y: hidden;
                 height: 18px;
@@ -81,7 +83,8 @@
             }
 
             & > span.articulo__nombre{
-                max-height: 30px;
+                display: inline-block;
+                height: 30px;
                 font-family: var.$font-InterRegular;
                 overflow: hidden;
                 font-size: 0.8125rem;
@@ -90,6 +93,7 @@
                 line-height: 0.9375rem;
                 letter-spacing: 0rem;
                 text-align: left;
+                text-overflow: ellipsis;
                 font-feature-settings: 'ss01' on, 'case' on;
             }
         }
@@ -187,13 +191,13 @@
 
     &__img{
         @include ani.ani-loading-article;
-        width: 130px;
-        height: 178px; 
+        width: 91.5%;
+        height: 59.7315%; 
         background: #f0f0f0;
     }
     &__marca{
         @include ani.ani-loading-article;
-        width: 72px;
+        width: 50.07%;
         height: 12px;
         background: rgb(240,240,240);
     }
@@ -215,7 +219,7 @@
     }
     &__btn{
         display: none;
-        width: 60px;
+        width: 42.2535211%;
         height: 48px; 
         border: 3px solid rgb(240,240,240);
         border-radius: 6px;
@@ -223,6 +227,123 @@
     }
 }
 
-@media screen and (min-width: var.$screen-width-tablet) {
+@media screen and (min-width: var.$screen-width-desktop) {
+
+    .articulo{
+        overflow: initial;
+        width: 240px;
+        height: 510px;
+        padding: 6px 12px 15px;
+        gap: 12px;
+
+        //Contenedor Imagen
+        &__containerImg{
+            width: 210px;
+            height: 288px;
+            position: relative;
+        }
+
+        //Contenedor Ficha
+        & > .articulo__ficha{
+            overflow: initial;
+            gap: 12px;
+
+            & > .articulo__articulo{
+                height: 54px;
+                overflow: initial;
+            
+                & > span.articulo__nombre{
+                    max-height: 36px;
+                    overflow: visible;
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+               
+                }
+            }
+            //Section Precio
+            & > .articulo__precio{
+
+                & > div.articulo__cuota{
+                    &  > span.articulo__cuotaTxt{
+                        font-size: 0.9375rem;
+                        line-height: 1.125rem;
+                        height: 1.125rem;
+                        overflow: visible;
+                    }
+
+                    &  > span.articulo__cuotaCuota{
+                        font-size: 1.375rem;
+                        line-height: 1.5rem;
+                    }
+                }
+
+                & > div.articulo__final{
+                    margin-top: 6px;
+                    gap: 6px;
+                    
+                    &  > span.articulo__finalText{
+                        font-size: 0.9375rem;
+                        line-height: 1.125rem;
+                    }
+
+                    &  > span.articulo__finalAntes{
+                        font-size: 0.9375rem;
+                        line-height: 1.125rem;
+                    }
+                    
+                    &  > span.articulo__finalDespues{
+                        font-size: 1rem;
+                        line-height: 1.125;
+                        &-sin{
+                            font-size: 1em;
+                            line-height: 1.125em;
+                            color:#000000;
+                        }
+                    }
+                }
+                
+            }
+            & > .btn1{
+                display: flex;
+            }
+        }
+        &:hover > .articulo__ficha > .btn1{
+            display: flex;
+            width: 147px;
+            color: var.$btn1-color-hover;
+            background-color: var.$btn1-color-bg-hover;
+            border: none;
+   
+            span{
+                display: block;
+            }
+            svg{
+                path{
+                    fill: var.$btn1-color-active;
+                }
+            }
+        }
+        &:active > .articulo__ficha > .btn1{
+            box-shadow: 0px -2px 6px 0px var.$btn1-color-boxshadow1 inset;
+            box-shadow: 0px 2px 6px 0px var.$btn1-color-boxshadow2 inset;
+        }
+    }
     
+    .loading{
+        @include mix.flex($direction: column,
+        $justify-content:center,
+        $align-items: stretch,
+        $flex-wrap:nowrap);
+        gap: 12px;
+        width: 240px;
+        height: 510px;
+        overflow: visible;
+        padding: 6px 12px 15px;
+            
+        &__btn{
+            display: block;
+            width: 27.777%;
+        }
+    }
 }
+

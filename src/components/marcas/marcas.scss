@@ -1,0 +1,24 @@
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/variables.scss" as var;
+
+.marcas{
+    
+    @include mix.flex($direction:column);
+    width: 100%;
+    height: 96px;
+    margin-top: 48px;
+    gap: 6px;
+    
+    &__title{
+        color: #7D5A94;
+        text-align: center;
+    }
+    
+    &__slideLogos{
+        @include mix.flex();
+        width: 133px;
+        height: 60px;
+        gap: 18px;
+    }
+    
+}

@@ -1,46 +1,140 @@
 @use "../../sass/mixins" as mix;
+@use "../../sass/variables" as var;
+@use "../../sass/animations" as ani;
 
 .temporada{
 
-    @include mix.flex($direction:column);
+    @include mix.flex($direction:column, $flex-wrap:nowrap, $justify-content:space-between);
     margin-top: 24px;
-    margin-bottom: 24px;
     height: 794px;
-    overflow: visible;
+    overflow: hidden;
     gap:24px;
+    position: relative;
     
-    &__description{
-
+    & > .temporada__title > span, .temporada__title{
+        font-family: var.$font-NeueMcahinaUltrabold;
         height: 30px;
         font-style: normal;
         font-weight: 800;
         font-size: 27px;
         line-height: 30px;
-        padding-left: 18px;
         font-feature-settings: 'zero' on;
-        overflow: hidden
+    }
+
+    & > .temporada__title > span{
+        @include ani.ani-marquee();
+        display: block;
+        height: 30px;
+        overflow: hidden;
+        white-space: nowrap;  
     }
 
     &__products{
-        @include mix.flex($direction: row, $justify-content:flex-start);
+        @include mix.flex($direction: row, $justify-content:space-evenly, $align-items:flex-start);
         height: 298px;
         gap: 18px;
-        overflow: visible;
-
-        &:nth-child(1){
-            flex-direction: column;
-        }
+        width: 100%;
 
         & > .articulo:nth-child(even), & > .loading:nth-child(even){
-            padding-top: 60px;
+            margin-top: 60px;
+        }
+
+        & > .articulo:nth-child(n+3),.loading:nth-child(n+3){
+            display: none;
+        }
+
+        & > .temporada__contenido{
+            display: none;
+    
+            & > .temporada__title{
+                font-family: var.$font-NeueMcahinaUltrabold;
+                height: auto;
+                overflow: visible;
+                display: none;
+            }
+    
+            & > .temporada__description{
+                font-family: var.$font-InterRegular;
+                font-weight: 700;
+                font-size: 1.375rem;
+                line-height: 1.5rem;
+                font-feature-settings: 'zero' on;
+                overflow: hidden;
+                display: none;
+            }
+
         }
 
     }
 
-
-    & > .btn2{
+    .btn2{
         width: 175px;
         height: 48px;
         margin-top: auto;
+        margin-bottom: 4px;
+    }
+}
+
+@media screen and (min-width: var.$screen-width-desktop) {
+
+    .main{
+        margin: 0px 48px;
+    }
+    .temporada{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: 1152px;
+        margin: 0px;
+        overflow: initial;
+    
+    & > .temporada__title{
+        display: none;
+    }
+
+        &__products{
+            justify-content: space-between;
+            flex-direction: row;
+            height: 500px;
+            overflow: visible;
+
+            & > .temporada__contenido{
+                @include mix.flex($justify-content:flex-start);
+                margin-top: 72px;
+                width: 32.25rem;
+                height: 19.875rem;
+    
+                & > .temporada__title{
+                    display: block;
+                    max-height: auto;
+                }
+        
+                & > .temporada__description{
+                    font-family: var.$font-InterRegular;
+                    font-weight: 700;
+                    font-size: 1.375rem;
+                    line-height: 1.5rem;
+                    font-feature-settings: 'zero' on;
+                    overflow: hidden;
+                    display: block;
+                }
+
+                & > .btn2{
+                    display: block;
+                }
+            }
+
+            & > .articulo:nth-child(even), & > .loading:nth-child(even){
+                margin-top: 100px;
+            }
+            & > .articulo:nth-child(n+3){
+                display: block;
+            }
+    
+        }
+        .btn2{
+            display: none;
+        }
     }
 }

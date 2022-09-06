@@ -2,11 +2,10 @@
 @use "../../sass/variables.scss" as var;
 
 .header{
-
+    @include mix.flex();
     width: 100%;
     min-height: 72px;
-    max-height: calc(72px + 78px );
-    color: #FFFFFF;
+    background-color: #FFFFFF;
     
     &__menu{
         width: 36px;
@@ -76,10 +75,12 @@
 
 @media screen and (min-width: var.$screen-width-desktop) {
     .header{
+        height: 96px;
         &__logo{
             display: none;
         }
         &__nav{
+            height: 96px;
             & > .header__links{
                 @include mix.flex();
                 margin-right: auto;
