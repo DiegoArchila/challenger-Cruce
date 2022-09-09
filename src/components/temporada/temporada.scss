@@ -30,7 +30,9 @@
     }
 
     &__products{
-        @include mix.flex($direction: row, $justify-content:space-evenly, $align-items:flex-start);
+        @include mix.flex($direction: column, 
+            $justify-content:space-evenly, 
+            $align-items:center);
         height: 298px;
         gap: 18px;
         width: 100%;

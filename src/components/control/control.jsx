@@ -5,7 +5,7 @@ import "./control.scss";
  * @param {import("react").ReactSVGElement} Children Svg 
  * @returns Component Control
  */
-function Control({children}){
+function Control({children, props}){
     return (
         <button type="submit" className="control">
             {children}
