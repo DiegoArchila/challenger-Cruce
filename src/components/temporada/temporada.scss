@@ -38,7 +38,7 @@
         width: 100%;
 
         & > .articulo:nth-child(even), & > .loading:nth-child(even){
-            margin-top: 60px;
+            margin-top: 120px;
         }
 
         & > .articulo:nth-child(n+3),.loading:nth-child(n+3){
@@ -89,7 +89,6 @@
         flex-wrap: wrap;
         height: 1152px;
         margin: 0px;
-        overflow: initial;
     
     & > .temporada__title{
         display: none;
@@ -98,14 +97,15 @@
         &__products{
             justify-content: space-between;
             flex-direction: row;
+            align-items: flex-start;
             height: 500px;
             overflow: visible;
 
             & > .temporada__contenido{
                 @include mix.flex($justify-content:flex-start);
                 margin-top: 72px;
-                width: 32.25rem;
-                height: 19.875rem;
+                max-width: 515px;
+                max-height: 318px;
     
                 & > .temporada__title{
                     display: block;
@@ -128,7 +128,7 @@
             }
 
             & > .articulo:nth-child(even), & > .loading:nth-child(even){
-                margin-top: 100px;
+                margin-top: 120px;
             }
             & > .articulo:nth-child(n+3){
                 display: block;

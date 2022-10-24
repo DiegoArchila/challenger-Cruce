@@ -28,11 +28,13 @@ a, Link{
     color: #000000;
 }
 
-main,header{
+main{
     overflow: hidden;
-    width: 90%;
+    padding: 0px 12px;
 
 }
+
+/* ---------- Titles H1-6 */
 
 h1,h2,h3,h4,h5,h6{
     font-family: var.$font-NeueMcahinaUltrabold;
@@ -47,6 +49,15 @@ h1{
     line-height: 3.5rem;
     letter-spacing: -0.03em;
     font-feature-settings: 'zero' on, 'liga' off;
+}
+
+h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2875rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.01em;
+    font-feature-settings: 'zero' on;
 }
 
 h4{

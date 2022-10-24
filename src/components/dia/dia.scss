@@ -1,0 +1,34 @@
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/variables.scss" as var;
+
+.dia{
+    margin-top: 48px;
+    height: 392px;
+    overflow: visible;
+
+    &__titulo {
+        font-family: var.$font-InterBold;
+        font-size: calc(2.2375em + 1.5vw);
+        overflow: visible;
+        color: #F26522;
+    }
+
+    &__contenido {
+        @include mix.flex();
+    }
+
+    &__video{
+        width: 100%;
+        border: 6px solid #000000;
+        border-radius: 12px;
+    }
+
+}
+
+@media screen and (min-width: var.$screen-width-desktop) {
+    .dia{
+        &__contenido {
+            flex-direction: row;
+        } 
+    }
+}

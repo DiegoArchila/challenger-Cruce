@@ -7,6 +7,7 @@ import Moto from "../../svg/icon/envio-2.svg";
 import dataProducts from "../../data/products.js";
 import Temporada from "../../components/temporada/temporada.jsx";
 import Marcas from "../../components/marcas/marcas.jsx";
+import Dia from "../../components/dia/dia.jsx";
 
 
 function Home() {
@@ -39,6 +40,8 @@ function Home() {
         tempProducts:dataProducts
     };
 
+    const productDay=dataProducts[1];
+
     const marcas=[
         "disney.png",
         "funko.png",
@@ -58,6 +61,7 @@ function Home() {
                 <Beneficios beneficios={beneficios} key={"beneficios"}/>
                 <Temporada temporada={temporada} />
                 <Marcas marcas={marcas} />
+                <Dia productDay={ productDay } />
             </main>
         </div>
     );
