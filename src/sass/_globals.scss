@@ -22,3 +22,23 @@
 .mt-60{
     margin-top: 120px;
 }
+
+%articulo3{
+    width: 296px;
+    height: 176px;
+    flex-wrap: nowrap;
+    //Contenedor Ficha
+    & > .articulo__ficha{
+        width: 164px;
+    }
+}
+
+.articulo-reset{
+    width: 240px;
+    height: 510px;
+    flex-wrap: wrap;
+    //Contenedor Ficha
+    & > .articulo__ficha{
+        width: 100%;
+    }
+}

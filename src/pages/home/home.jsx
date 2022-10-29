@@ -58,10 +58,11 @@ function Home() {
             <Header itemsCart={3} Msg={etiquetaMsg}/>
             
             <main className="main">
-                <Beneficios beneficios={beneficios} key={"beneficios"}/>
-                <Temporada temporada={temporada} />
-                <Marcas marcas={marcas} />
-                <Dia productDay={ productDay } />
+                <Beneficios beneficios={beneficios} key={"beneficios_desktop"} className={"beneficios_desktop"} />
+                <Temporada temporada={temporada} key="temporada"/>
+                <Marcas marcas={marcas} key="marcas" />
+                <Dia productDay={ productDay } key="dia" />
+                <Beneficios beneficios={beneficios} key={"beneficios_mobile"} className="beneficios__mobile"/>
             </main>
         </div>
     );

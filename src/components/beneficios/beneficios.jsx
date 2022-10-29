@@ -1,10 +1,52 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import "./beneficios.scss";
+import Glide from "@glidejs/glide/dist/glide";
+import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+
+
+/**
+     * Settings Slider
+     */
+ const sliderConfiguration= {
+    gap:10,
+    focusAt: "center",
+    type: 'carousel',
+    autoplay: 3000,
+    animationDuration: 1000,
+    animationTimingFunc: 'linear',
+    perView:6,
+
+    breakpoints:{
+        1120:{ 
+            perView: 4,
+            gap:10,
+            focusAt: "center"
+        },
+
+        820:{
+            focusAt: "center",
+            gap:10,
+            perView: 3  
+        },
+
+        520:{
+            focusAt: "center",
+            gap:10,
+            perView: 2  
+        }
+    }
+};
+
 
 
 
 function Beneficios({beneficios}) {
 
+    const slider = new Glide(".glide",sliderConfiguration);
+  
+    useEffect(() => {
+        slider.mount();
+    }, [slider]);
     
     /**
      * Setting Beneficios
@@ -16,39 +58,6 @@ function Beneficios({beneficios}) {
     };
 
     const beneficiosLength=beneficios.length;
-
-    /**
-     * Settings Slider
-     */
-     const sliderConfiguration= {
-        gap:10,
-        focusAt: "center",
-        type: 'carousel',
-        autoplay: 3000,
-        animationDuration: 1000,
-        animationTimingFunc: 'linear',
-        perView:6,
-
-        breakpoints:{
-            1120:{ 
-                perView: 4,
-                gap:10,
-                focusAt: "center"
-            },
-
-            820:{
-                focusAt: "center",
-                gap:10,
-                perView: 3  
-            },
-
-            520:{
-                focusAt: "center",
-                gap:10,
-                perView: 2  
-            }
-        }
-    };
 
     return(
         <section className="beneficios">

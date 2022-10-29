@@ -178,10 +178,6 @@
     }  
 }
 
-.articulo3{
-    @extend .articulo
-}
-
 .loading{
     @include mix.flex($direction: column,
     $justify-content:center,
@@ -350,4 +346,3 @@
         }
     }
 }
-

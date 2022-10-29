@@ -37,7 +37,7 @@ function Marcas({marcas}) {
     };
       
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     const slider = new Glide(".glide",sliderConfiguration);
       
     useEffect(() => {
