@@ -1,20 +1,28 @@
 @use "../../sass/mixins.scss" as mix;
 @use "../../sass/variables.scss" as var;
 
-.main{
-    & > .beneficios__mobile{
-        & > .beneficios {
-            @include mix.flex();
-        }
+.app{
+    & > .main{
+       #beneficios__mobile{
+        //@include mix.flex($flex-wrap:nowrap);
+        display: none;
+        overflow: hidden;
+       }
+       #beneficios__desktop{
+        display: none;
+       }
     }
 }
 
 @media screen and (min-width: var.$screen-width-desktop) {
-    .main{
-        & > .beneficios__mobile{
-            & > .beneficios {
-                display: none;
-            }
+    .app{
+        & > .main{
+           #beneficios__mobile{
+            display: none;
+           }
+           #beneficios__desktop{
+            @include mix.flex();
+           }
         }
     }
 }

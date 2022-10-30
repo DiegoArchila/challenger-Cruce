@@ -52,7 +52,7 @@
     }
 }
 
-@media screen and (min-width: var.$screen-width-desktop) {
+@media screen and (min-width: var.$screen-width-desktop-l) {
     .beneficios{
         @include mix.flex();
     }

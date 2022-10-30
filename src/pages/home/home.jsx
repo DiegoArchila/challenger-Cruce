@@ -1,3 +1,5 @@
+import "./home.scss";
+
 import Beneficios from "../../components/beneficios/beneficios.jsx";
 import Header from "../../partials/header/header.jsx";
 import tCredito from "../../svg/icon/credito.svg";
@@ -58,11 +60,11 @@ function Home() {
             <Header itemsCart={3} Msg={etiquetaMsg}/>
             
             <main className="main">
-                <Beneficios beneficios={beneficios} key={"beneficios_desktop"} className={"beneficios_desktop"} />
+                <Beneficios beneficios={beneficios} key={"beneficios_desktop"} id={"beneficios__desktop"} />
                 <Temporada temporada={temporada} key="temporada"/>
                 <Marcas marcas={marcas} key="marcas" />
+                <Beneficios beneficios={beneficios} key={"beneficios_mobile"} id="beneficios__mobile"/>
                 <Dia productDay={ productDay } key="dia" />
-                <Beneficios beneficios={beneficios} key={"beneficios_mobile"} className="beneficios__mobile"/>
             </main>
         </div>
     );

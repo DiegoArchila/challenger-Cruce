@@ -12,7 +12,8 @@
 }
 
 .app{
-    //@include mix.flex();
+    @include mix.flex();
+    
 }
 
 .isFlex-start{
@@ -30,15 +31,5 @@
     //Contenedor Ficha
     & > .articulo__ficha{
         width: 164px;
-    }
-}
-
-.articulo-reset{
-    width: 240px;
-    height: 510px;
-    flex-wrap: wrap;
-    //Contenedor Ficha
-    & > .articulo__ficha{
-        width: 100%;
     }
 }

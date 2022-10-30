@@ -40,7 +40,7 @@ import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 
 
 
-function Beneficios({beneficios}) {
+function Beneficios({beneficios, id}) {
 
     const slider = new Glide(".glide",sliderConfiguration);
   
@@ -60,7 +60,8 @@ function Beneficios({beneficios}) {
     const beneficiosLength=beneficios.length;
 
     return(
-        <section className="beneficios">
+        
+        <section className="beneficios" id={id}>
             {beneficios.map((e,i) => {
                 return(
                     <Fragment>

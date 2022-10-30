@@ -11,7 +11,7 @@ function Temporada({temporada}) {
                     {temporada.title}
                 </span>
             </div>
-            <div className="temporada__products">
+            <div className="temporada__products" id="temporada__products-1">
             {temporada.tempProducts.map((e,i) => {
                 let productTemp=[];
                 if (i<2) {
