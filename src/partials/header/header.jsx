@@ -65,8 +65,8 @@ function Header({ itemsCart, Msg }) {
       </nav>
       
       <Buscar id={"searchHeader"} />
+      <Etiqueta Message={Msg} />
     </header>
-    <Etiqueta Message={Msg} />
     </Fragment>
   );
 }

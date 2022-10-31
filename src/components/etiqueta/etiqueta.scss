@@ -9,6 +9,7 @@
     background-color: #7D5A94;
     overflow: hidden;
     padding-left: 6px;
+    z-index: 2;
         
     & > span.etiqueta__msg{
         width: calc(100% - 30px);
