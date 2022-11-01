@@ -6,10 +6,12 @@ import tCredito from "../../svg/icon/credito.svg";
 import Carro from "../../svg/icon/envio-1.svg";
 import Moto from "../../svg/icon/envio-2.svg";
 
-import dataProducts from "../../data/products.js";
+import { searched, Products as dataProducts } from "../../data/index.js";
 import Temporada from "../../components/temporada/temporada.jsx";
 import Marcas from "../../components/marcas/marcas.jsx";
 import Dia from "../../components/dia/dia.jsx";
+import { MostWanted } from "../../components/containers/MoreSearcheds/MostWanted";
+
 
 
 function Home() {
@@ -65,6 +67,7 @@ function Home() {
                 <Marcas marcas={marcas} key="marcas" />
                 <Beneficios beneficios={beneficios} key={"beneficios_mobile"} id="beneficios__mobile"/>
                 <Dia productDay={ productDay } key="dia" />
+                <MostWanted masBuscados={searched} />
             </main>
         </div>
     );

@@ -1,0 +1,20 @@
+@use "../../../sass/mixins.scss" as mix;
+@use "../../../sass/variables.scss" as var;
+@use "../../../sass/globals.scss" as global;
+
+.mostWanted{
+    margin-top: 36px;
+    @include mix.flex();
+
+    &__title{
+        width: 145px;
+        height: 60px;
+        color:#76B043;
+    }
+}
+
+@media screen and (min-width: var.$screen-width-desktop) {
+    .mostWanted{
+        justify-content: space-between;
+    }
+}

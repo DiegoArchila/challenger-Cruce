@@ -1,4 +1,4 @@
-const Products=[
+ export const Products=[
 	{
         marca: "funko",
         nombre: "Funko POP | Game Of Thrones - Daenerys 25",
@@ -60,5 +60,3 @@ const Products=[
         imgInBox: "GameOfThrones-NightKing-InBox.png"
 	}
 ];
-
-export default Products;

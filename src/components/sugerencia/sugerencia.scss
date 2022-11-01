@@ -4,27 +4,62 @@
 
 .sugerencia{
     @include mix.flex();
+    flex-wrap: nowrap;
     width: 145px;
     height: 108px;
 
     &__img{
         width: 72px;
-        height: 72px; 
+        height: 72px;
+        margin-right: 7px;
     }
 
     &__detail{
-        &-title{
-            //styleName: t2-r;
+        @include mix.flex();
+        
+        &-title, 
+        &-prices > .sugerencia__priceBefore,
+        &-prices > .sugerencia__priceAfter,
+        &-prices > .sugerencia__price{
             font-family: var.$font-InterRegular;
             font-size: 13px;
             font-weight: 400;
             line-height: 15px;
             letter-spacing: 0em;
             text-align: left;
-
         }
-        &-price{
 
+        &-title{
+            width: 66px;
+            height: auto;
+            
+        }
+        &-prices{
+            display: none;
+            margin-top: 6px;
+
+            > .sugerencia__priceBefore{
+                
+                text-decoration-line: line-through;
+                font-feature-settings: 'ss01' on, 'case' on;
+                color: #8C8C8C;
+
+            }
+            > .sugerencia__priceAfter{
+                font-weight: 700;
+                letter-spacing: 0.01em;
+                font-feature-settings: 'ss01' on, 'case' on;
+                color: #EC2227;
+            }
+
+            > .sugerencia__price{
+                margin-top: 15px;
+                font-weight: 700;
+                letter-spacing: 0.01em;
+                font-feature-settings: 'ss01' on, 'case' on;
+                color: #000000;
+
+            }
         }
     }
 }
@@ -33,6 +68,28 @@
 
     .sugerencia{
         width: 192px;
+
+        &__detail{
+            justify-content: flex-start;
+
+            &-title{
+                width: 113px;
+                height: 30px;
+                word-break: break-word;
+                white-space: break-spaces;
+                overflow: hidden;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            &-prices{
+                @include mix.flex($direction:column);
+                & > span {
+                    display: block;
+                }
+            }
+
+        }
 
     }
 
