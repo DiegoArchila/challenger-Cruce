@@ -4,7 +4,7 @@
 
 .mostWanted{
     margin-top: 36px;
-    @include mix.flex();
+    @include mix.flex($justify-content:space-between);
 
     &__title{
         width: 145px;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (min-width: var.$screen-width-desktop) {
-    .mostWanted{
-        justify-content: space-between;
-    }
+    // .mostWanted{
+    //     justify-content: space-between;
+    // }
 }

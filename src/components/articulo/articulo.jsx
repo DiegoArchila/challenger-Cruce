@@ -47,7 +47,7 @@ function Articulo({product}){
         <Fragment>
             {
                 (Load) ? 
-                <article className={"articulo"}>
+                <article className={"articulo"} key={product.name}>
     
                 <div className="articulo__containerImg">
                     <img src={require("../../img/products/"+product.imgInBox)} alt={product.nombre} className="articulo__img" id="imgInBox"/>

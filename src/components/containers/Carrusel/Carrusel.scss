@@ -1,0 +1,28 @@
+@use "../../../sass/variables.scss" as var;
+@use "../../../sass/mixins.scss" as mix;
+@use "../../../sass/animations.scss" as ani;
+
+.carrusel{
+    margin-top: 60px;
+
+    &__title{
+        font-weight: 800;
+        margin-bottom: 12px;
+        font-size: 27px;
+    }
+
+    &__link{
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .glide__arrows{
+        margin-top: 12px;
+        @include mix.flex($direction: row, $justify-content:flex-start);
+        gap: 24px;
+    }
+
+}
