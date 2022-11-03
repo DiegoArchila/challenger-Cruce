@@ -12,6 +12,8 @@ export const Carrusel = ({products, title}) => {
         focusAt: 2,
         startAt: 1,
         perView:4,
+        perTouch: 4,
+        slidesToScroll:4,
         type: 'carousel',
         autoplay: 3000,
         animationDuration: 1000,
@@ -36,11 +38,11 @@ export const Carrusel = ({products, title}) => {
       
 
 
-    const sliderCarrousel = new Glide(".glide__carrusel",sliderConfiguration);
+    const sliderCarrusel = new Glide(".glide__carrusel",sliderConfiguration);
       
     useEffect(() => {
-        return () => sliderCarrousel.mount();
-    }, [sliderCarrousel]);
+        return () => sliderCarrusel.mount();
+    }, [sliderCarrusel]);
       
     
 
@@ -59,8 +61,8 @@ export const Carrusel = ({products, title}) => {
                         let res=[];
                         
                         res.push(
-                            <li className="glide__slide slider" key={product.name+index}>
-                                <Articulo product={product} />
+                            <li className="glide__slide slider">
+                                <Articulo product={product}  key={product.name+index} />
                             </li>
                         );
 

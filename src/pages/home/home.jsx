@@ -68,7 +68,7 @@ function Home() {
                 <Beneficios beneficios={beneficios} key={"beneficios_mobile"} id="beneficios__mobile"/>
                 <Dia productDay={ productDay } key="dia" />
                 <MostWanted masBuscados={searched} />
-                <Carrusel products={Novedades} title={"Novedades"} />
+                <Carrusel products={Novedades} title={"Novedades"} key={"CarrouselNovedades"}/>
             </main>
         </div>
     );
