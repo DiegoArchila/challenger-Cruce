@@ -23,6 +23,18 @@
         margin-top: 12px;
         @include mix.flex($direction: row, $justify-content:flex-start);
         gap: 24px;
+        position: relative;
+
+        > .glide__information{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            font-family: var.$font-InterRegular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+        }
     }
 
 }

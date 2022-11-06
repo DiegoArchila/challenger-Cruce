@@ -31,7 +31,7 @@ const loading=(
 
 
 
-function Articulo({product}){
+function Articulo({product, propKey}){
     const [Load, setLoad]=useState(false);
 
     let pDescuento=Math.round(((product.precio * product.promo)/100));
@@ -47,7 +47,7 @@ function Articulo({product}){
         <Fragment>
             {
                 (Load) ? 
-                <article className={"articulo"} key={product.name}>
+                <article className={"articulo"} key={propKey}>
     
                 <div className="articulo__containerImg">
                     <img src={require("../../img/products/"+product.imgInBox)} alt={product.nombre} className="articulo__img" id="imgInBox"/>
