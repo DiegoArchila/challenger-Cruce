@@ -1,7 +1,5 @@
 import "./Carrusel.scss";
-// import Glide from "@glidejs/glide/dist/glide";
-// import "../../../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Articulo from "../../articulo/articulo.jsx";
 
 import Glide from 'react-glider';
@@ -12,8 +10,12 @@ import Control from "../../control/control";
 
 export const Carrusel = ({products, title}) => {
 
+    const [currSlide, setCurrSlide] = useState()
+    const [currPage, setCurrPage] = useState()
+
     const refBtnLeftGlideNove =useRef();
     const refBtnRightGlideNove =useRef();
+    const refGlider=useRef();
 
     const responsiveGliderNovedades= [
         {
@@ -51,8 +53,8 @@ export const Carrusel = ({products, title}) => {
         }
           
     ];
-      
 
+    var lengthSlider=0;    
 
     return (
     <section className="carrusel" key={title}>
@@ -72,9 +74,20 @@ export const Carrusel = ({products, title}) => {
                     next: refBtnRightGlideNove.current
                 }}
                 slidesToShow={2}
+                draggable={false}
                 scrollToSlide={2}
                 duration={0.5}
                 responsive={responsiveGliderNovedades}
+                onAnimated={e =>{
+                    setCurrPage(refGlider.current.page)
+                    setCurrSlide(refGlider.current.slide+refGlider.current.opt.slidesToShow);
+                    // console.clear();
+                    // console.log("slider", refGlider.current.slide+refGlider.current.opt.slidesToShow)
+                    // console.log("page", refGlider.current.page)
+                    // console.log("Object", refGlider.current)
+
+                }}
+                ref={refGlider}
                 >
                 {products.map((product, index)=>{
                     let res=[];
@@ -103,7 +116,7 @@ export const Carrusel = ({products, title}) => {
                     </svg>
                 </button>
                 <span className="glide__information">
-                    4 de 12
+                    {currSlide} de {products.length}
                 </span>
             </div>
     </section>
