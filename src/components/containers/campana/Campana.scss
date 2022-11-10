@@ -1,0 +1,40 @@
+@use "../../../sass/variables.scss" as var;
+@use "../../../sass/mixins.scss" as mix;
+@use "../../../sass/animations.scss" as ani;
+@use "../../../sass/globals" as global;
+
+.campana{
+    margin-top: 36px;
+    height: 684px;
+    position: relative;
+    
+    & > &__banner1{
+        width: 100%;
+        height: calc(160px);
+        position: absolute;
+        top: 0px;
+        z-index: 0;
+    }
+    
+    & > &__banner2{
+        height: 180px;
+        width: 180px;
+        z-index: 0;
+        position: absolute;
+        right: calc(24px);
+        top: calc(60px);
+    }
+
+    & > &__carrusel{
+
+        .glider-track{
+            margin-left: 12px;
+            margin-top: 210px;
+            height: 437px;
+        }
+        .articulo{
+            @extend %articulo;
+        }  
+    }
+
+}

@@ -19,6 +19,10 @@
         line-height: 12px;
     }
 
+    & > ul.glide__slides{
+        margin-top: 27px;
+    }
+
     .glide__arrows{
         margin-top: 12px;
         @include mix.flex($direction: row, $justify-content:flex-start);

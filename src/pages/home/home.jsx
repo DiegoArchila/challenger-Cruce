@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./home.scss";
 
 import Beneficios from "../../components/beneficios/beneficios.jsx";
@@ -6,16 +7,86 @@ import tCredito from "../../svg/icon/credito.svg";
 import Carro from "../../svg/icon/envio-1.svg";
 import Moto from "../../svg/icon/envio-2.svg";
 
-import { searched, Products as dataProducts, Novedades } from "../../data/index.js";
+import { searched, Products as dataProducts, Novedades, campana } from "../../data/index.js";
 import Temporada from "../../components/temporada/temporada.jsx";
 import Marcas from "../../components/marcas/marcas.jsx";
 import Dia from "../../components/dia/dia.jsx";
-import { Carrusel, MostWanted } from "../../components/containers";
+import { Campana, Carrusel, MostWanted } from "../../components/containers";
 
 
 
 function Home() {
 
+    //-----------------------Refs
+    //---GliderNovedades
+
+    const refGliderCarruselNove=useRef();
+    const refBtnLeftGlideNove=useRef();
+    const refBtnRightGlideNove=useRef();
+
+    const configSliderCarruselNove= {
+        settings:{
+            slidesToShow:2,
+            draggable: false,
+            scrollToSlide: 2,
+            duration:0.5
+        },
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 850,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 720,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            itemWidth: 150,
+            duration: 0.25,
+            },
+        }
+          
+    ]};
+
+
+//---GliderNovedades
+
+const refGliderCarruselCamp=useRef();
+const refBtnLeftGlideCamp=useRef();
+const refBtnRightGlideCamp=useRef();
+
+const configSliderCarruselCamp= {
+    settings:{
+        slidesToShow:1,
+        draggable: false,
+        scrollToSlide: 1,
+        duration:0.5
+    },
+    responsive: null      
+};
+
+
+    //--------------------------
 
     const beneficios=[
         {   
@@ -67,8 +138,37 @@ function Home() {
                 <Marcas marcas={marcas} key="marcas" />
                 <Beneficios beneficios={beneficios} key={"beneficios_mobile"} id="beneficios__mobile"/>
                 <Dia productDay={ productDay } key="dia" />
-                <MostWanted masBuscados={searched} />
-                <Carrusel products={Novedades} title={"Novedades"} propKey={"CarrouselNovedades"}/>
+                <MostWanted masBuscados={searched} key={"masbuscados"} />
+                
+                <Carrusel 
+                    products={Novedades} 
+                    title={"Novedades"} 
+                    configSlider={configSliderCarruselNove} 
+                    propKey={"CarrouselNovedades"} 
+                    refGlider={refGliderCarruselNove} 
+                    refBtnLeftGlide={refBtnLeftGlideNove}
+                    refBtnRightGlide={refBtnRightGlideNove}
+                    isCarrusel={true}
+                />
+                
+                <Campana 
+                    imgBanner1={campana.banners.banner1} 
+                    imgBanner2={campana.banners.banner2} 
+                    nameCampana={campana.nameCampana} 
+                    products={campana.nameCampana} 
+                    key={campana.nameCampana} 
+                >
+                    <Carrusel
+                        products={campana.products} 
+                        title={campana.nameCampana} 
+                        configSlider={configSliderCarruselCamp} 
+                        propKey={"CarrouselCampaña"} 
+                        refGlider={refGliderCarruselCamp} 
+                        refBtnLeftGlide={refBtnLeftGlideCamp}
+                        refBtnRightGlide={refBtnRightGlideCamp}
+                        isCarrusel={false}
+                    />
+                </Campana>
             </main>
         </div>
     );

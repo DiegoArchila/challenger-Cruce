@@ -1,4 +1,6 @@
 @use "./mixins.scss" as mix;
+@use "./variables" as var;
+@use "./animations.scss" as ani;
 
 /* -------------------- GLOBALS */
 
@@ -31,5 +33,105 @@
     //Contenedor Ficha
     & > .articulo__ficha{
         width: 164px;
+    }
+}
+
+%articulo{
+    overflow: initial;
+    width: 240px;
+    height: 510px;
+    padding: 6px 12px 15px;
+    gap: 12px;
+
+    //Contenedor Imagen
+    &__containerImg{
+        width: 210px;
+        height: 288px;
+        position: relative;
+    }
+
+    //Contenedor Ficha
+    & > .articulo__ficha{
+        overflow: initial;
+        gap: 12px;
+
+        & > .articulo__articulo{
+            height: 54px;
+            overflow: initial;
+        
+            & > span.articulo__nombre{
+                max-height: 36px;
+                overflow: visible;
+                font-size: 0.9375rem;
+                line-height: 1.125rem;
+           
+            }
+        }
+        //Section Precio
+        & > .articulo__precio{
+
+            & > div.articulo__cuota{
+                &  > span.articulo__cuotaTxt{
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+                    height: 1.125rem;
+                    overflow: visible;
+                }
+
+                &  > span.articulo__cuotaCuota{
+                    font-size: 1.375rem;
+                    line-height: 1.5rem;
+                }
+            }
+
+            & > div.articulo__final{
+                margin-top: 6px;
+                gap: 6px;
+                
+                &  > span.articulo__finalText{
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+                }
+
+                &  > span.articulo__finalAntes{
+                    font-size: 0.9375rem;
+                    line-height: 1.125rem;
+                }
+                
+                &  > span.articulo__finalDespues{
+                    font-size: 1rem;
+                    line-height: 1.125;
+                    &-sin{
+                        font-size: 1em;
+                        line-height: 1.125em;
+                        color:#000000;
+                    }
+                }
+            }
+            
+        }
+        & > .btn1{
+            display: flex;
+        }
+    }
+    &:hover > .articulo__ficha > .btn1{
+        display: flex;
+        width: 147px;
+        color: var.$btn1-color-hover;
+        background-color: var.$btn1-color-bg-hover;
+        border: none;
+
+        span{
+            display: block;
+        }
+        svg{
+            path{
+                fill: var.$btn1-color-active;
+            }
+        }
+    }
+    &:active > .articulo__ficha > .btn1{
+        box-shadow: 0px -2px 6px 0px var.$btn1-color-boxshadow1 inset;
+        box-shadow: 0px 2px 6px 0px var.$btn1-color-boxshadow2 inset;
     }
 }
