@@ -36,7 +36,7 @@
     }
 }
 
-%articulo{
+%articulo1{
     overflow: initial;
     width: 240px;
     height: 510px;
@@ -44,7 +44,7 @@
     gap: 12px;
 
     //Contenedor Imagen
-    &__containerImg{
+    & > .articulo__containerImg{
         width: 210px;
         height: 288px;
         position: relative;
