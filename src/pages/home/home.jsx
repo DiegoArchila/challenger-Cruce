@@ -69,22 +69,70 @@ function Home() {
     ]};
 
 
-//---GliderNovedades
+    //---GliderCampana
 
-const refGliderCarruselCamp=useRef();
-const refBtnLeftGlideCamp=useRef();
-const refBtnRightGlideCamp=useRef();
+    const refGliderCarruselCamp=useRef();
+    const refBtnLeftGlideCamp=useRef();
+    const refBtnRightGlideCamp=useRef();
 
-const configSliderCarruselCamp= {
-    settings:{
-        slidesToShow:1,
-        draggable: false,
-        scrollToSlide: 1,
-        duration:0.5
-    },
-    responsive: null      
-};
+    const configSliderCarruselCamp= {
+        settings:{
+            slidesToShow:1,
+            draggable: false,
+            scrollToSlide: 1,
+            duration:0.5
+        },
+        responsive: null      
+    };
 
+    //---GliderTeRecomendamos
+    const refGliderCarruselRecome=useRef();
+    const refBtnLeftGlideRecome=useRef();
+    const refBtnRightGlideRecome=useRef();
+
+    const configSliderCarruselRecome= {
+        settings:{
+            slidesToShow:2,
+            draggable: false,
+            scrollToSlide: 2,
+            duration:0.5
+        },
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 850,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 720,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            itemWidth: 210,
+            duration: 0.25,
+            },
+        },{
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            itemWidth: 150,
+            duration: 0.25,
+            },
+        }
+          
+    ]};
 
     //--------------------------
 
@@ -169,6 +217,20 @@ const configSliderCarruselCamp= {
                         isCarrusel={false}
                     />
                 </Campana>
+
+                <MostWanted masBuscados={searched} key={"masbuscados"} />
+
+                <Carrusel 
+                    products={Novedades} 
+                    title={"Te recomendamos"} 
+                    configSlider={configSliderCarruselRecome} 
+                    propKey={"CarrouselNovedades"} 
+                    refGlider={refGliderCarruselRecome} 
+                    refBtnLeftGlide={refBtnLeftGlideRecome}
+                    refBtnRightGlide={refBtnRightGlideRecome}
+                    isCarrusel={true}
+                />
+
             </main>
         </div>
     );
