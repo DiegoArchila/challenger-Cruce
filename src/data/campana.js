@@ -19,7 +19,7 @@ export const campana={
                 marca: "Jansport",
                 nombre: "Mochila Madalyn Viajero Verde",
                 precio: 2295,
-                promo:15,
+                promo:0,
                 cSnInteres:6,
                 stock:12,
                 imgOutBox:"MochilaJansportMadalynFloral.png",

@@ -1,0 +1,40 @@
+@use "../../sass/variables.scss" as var;
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/animations.scss" as ani;
+
+.contador{
+    height: 72px;
+    width: 145px;
+
+    & > &__title h5{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 18px;
+        color: #505050;
+        margin-bottom: 6px;
+    }
+
+    & > &__containerTime{
+        
+        .contador__timer{
+            @include mix.flex($justify-content:space-between);
+            font-style: normal;
+            font-weight: 800;
+            font-size: 27px;
+            line-height: 30px; 
+            font-feature-settings: 'zero' on;
+            color: #EC2227;
+        }
+        .contador__description{
+            @include mix.flex($justify-content:flex-start);
+            font-family: var.$font-InterRegular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            gap: 19px;
+        }
+
+    }
+}

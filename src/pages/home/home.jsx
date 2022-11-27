@@ -17,6 +17,7 @@ import { Campana, Carrusel, MostWanted } from "../../components/containers";
 
 function Home() {
 
+    
     //-----------------------Refs
     //---GliderNovedades
 
@@ -186,6 +187,7 @@ function Home() {
                 <Marcas marcas={marcas} key="marcas" />
                 <Beneficios beneficios={beneficios} key={"beneficios_mobile"} id="beneficios__mobile"/>
                 <Dia productDay={ productDay } key="dia" />
+                
                 <MostWanted masBuscados={searched} key={"masbuscados"} />
                 
                 <Carrusel 
@@ -218,7 +220,7 @@ function Home() {
                     />
                 </Campana>
 
-                <MostWanted masBuscados={searched} key={"masbuscados"} />
+                <MostWanted masBuscados={searched} key={"masbuscados"} isContador={true}/>
 
                 <Carrusel 
                     products={Novedades} 
