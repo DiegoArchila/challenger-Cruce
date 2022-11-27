@@ -4,10 +4,15 @@
 
 .carrusel{
     margin-top: 60px;
+    
+    &__containerTitle{
+        @include mix.flex($justify-content: space-between, $direction:column, $align-items: flex-start);
+        height: 60px;
+    }
+
 
     &__title{
         font-weight: 800;
-        margin-bottom: 12px;
         font-size: 27px;
     }
 
@@ -17,6 +22,7 @@
         font-weight: 800;
         font-size: 10px;
         line-height: 12px;
+        margin-left: 6px;
     }
 
     & > ul.glide__slides{
@@ -41,4 +47,17 @@
         }
     }
 
+}
+@media screen and (min-width: var.$screen-width-desktop) {
+    .carrusel{
+        &__containerTitle{
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        &__link{
+            margin-top: 24px;
+            color: #8C8C8C;
+        }
+    }
 }

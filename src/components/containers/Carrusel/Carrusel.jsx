@@ -29,14 +29,14 @@ export function Carrusel ({
     return (
     <section className="carrusel" key={title}>
         { (isCarrusel) ?
-            <Fragment>
+            <div className="carrusel__containerTitle">
                 <h4 className="carrusel__title">
                     {title}
                 </h4>
                 <span className="carrusel__link">
                     {"ver todo"}
                 </span>
-            </Fragment>
+            </div>
             :
             ""
         }
