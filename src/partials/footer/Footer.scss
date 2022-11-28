@@ -1,0 +1,128 @@
+@use "../../sass/variables" as var;
+@use "../../sass/mixins.scss" as mix;
+@use "../../sass/animations.scss" as ani;
+
+.footer{
+    margin-top: 96px;
+    height: 396px;
+    width: 296px;
+    @include mix.flex($align-items: flex-start);
+
+    &__fila1{
+        @include mix.flex($align-items: center, 
+            $direction:row,
+            $justify-content: flex-end);
+        gap: 19px;
+        margin-left: auto;
+
+        &--column1{
+            width: 85px;
+            height: 42px;
+            @include mix.flex($align-items: flex-start, 
+                $direction:column,
+                $justify-content:space-between);
+
+        }
+
+        &--contacto{
+            font-family: var.$font-NeueMcahinaRegular;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 18px;
+            color: #F26522;
+            text-transform: capitalize;
+        }
+
+        &--mayoristas{
+            font-family: var.$font-NeueMcahinaRegular;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            color: #C8C8C8;
+        }
+
+        &--column2{
+            width: 136px;
+            height: 90px;
+        }
+
+        &--formEmail{
+            width: 136px;
+            height: 90px;
+            @include mix.flex($align-items: flex-start, 
+                $direction: row,
+                $justify-content: flex-start);
+        }
+
+        &--inputEmail{
+            width: 130px;
+            height: 30px;
+            border: 1px solid #C8C8C8;
+            border-radius: 3px;
+            font-family: var.$font-InterRegular;
+            padding-left: 12px;
+        }
+
+        &--titulo{
+            font-family: var.$font-NeueMcahinaRegular;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'ss01' on, 'case' on;
+        }
+
+        .btn3{
+            width: 70px;
+            height: 30px;
+            span{
+                text-transform: uppercase;
+                font-family: var.$font-NeueMcahinaRegular;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 10px;
+                line-height: 12px;
+            }
+            
+        }
+    }
+
+    &__fila2{
+        @include mix.flex($align-items: center, $direction: row);
+        width: 100%;
+        gap: 12px;
+
+        &--column1{
+            width: 50%;
+            @include mix.flex($align-items: flex-end, $direction: column);
+            
+        }
+
+        &--Link{
+            @include mix.flex();
+        }
+
+        
+        &--LinkText{
+            font-family: var.$font-NeueMcahinaRegular;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            color: #8C8C8C;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'ss01' on, 'case' on;
+        }
+
+        &--column2{
+            width: 50%;
+            @include mix.flex($align-items: flex-end, $direction: column);
+        }
+    }
+}

@@ -12,6 +12,7 @@ import Temporada from "../../components/temporada/temporada.jsx";
 import Marcas from "../../components/marcas/marcas.jsx";
 import Dia from "../../components/dia/dia.jsx";
 import { Campana, Carrusel, MostWanted } from "../../components/containers";
+import { Footer } from "../../partials/footer/Footer";
 
 
 
@@ -234,6 +235,8 @@ function Home() {
                 />
 
             </main>
+
+            <Footer key={"Footer"} cKey={"Footer"}/>
         </div>
     );
 }

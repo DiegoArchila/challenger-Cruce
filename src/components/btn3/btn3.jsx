@@ -1,9 +1,9 @@
 import "./btn3.scss";
 
-function Btn() {
+function Btn({caption}) {
     return (
         <button type="submit" className="btn3">
-            <span>Ver todo</span>
+            <span>{caption}</span>
         </button>
         
     );
