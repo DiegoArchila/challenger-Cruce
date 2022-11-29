@@ -80,7 +80,25 @@ export const Footer = ({cKey, socialNetworks, DocsTerms}) => {
             </div>
         </div>
 
+
         <div className='footer__fila3'>
+            <div className='footer__fila3--column1'>
+                <img src={require("../../img/logos/case.png")} alt={"logo1"} key={"logo1"} className="footer__fila3--logo" />
+
+                <div className='footer__fila3--separator'/>
+                
+                <img src={require("../../img/logos/ahora18.png")} alt={"logo2"} key={"logo2"} className="footer__fila3--logo" />
+                
+                <div className='footer__fila3--separator'/>
+                
+                <img src={require("../../img/logos/hotweek.png")} alt={"logo3"} key={"logo3"} className="footer__fila3--logo" />
+            </div>
+
+            <div className='footer__fila3--column2'>
+                <img src={require("../../img/logos/datafiscal.png")} alt={"logo4"} key={"logo4"} className="footer__fila3--logo" />
+                <img src={require("../../img/logos/vtex.png")} alt={"logo5"} key={"logo5"} className="footer__fila3--logo" />
+                <img src={require("../../img/logos/cruce.png")} alt={"logo6"} key={"logo6"} className="footer__fila3--logo" />
+            </div>
         </div>
     </footer>
   )
